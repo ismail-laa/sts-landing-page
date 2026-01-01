@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <!-- Styles -->
     <!-- CSS is imported via main.js -->
 
     <!-- Custom Style for Hero Image -->
@@ -172,86 +171,114 @@
                 <p class="text-center mb-lg" style="color: var(--text-light);">Remplissez ce formulaire pour recevoir
                     une estimation rapide et précise.</p>
 
-                <form id="lead-form">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="full_name">Nom Complet *</label>
-                            <input type="text" id="full_name" name="full_name" class="form-control" required
-                                placeholder="Votre nom">
-                        </div>
-                        <div class="form-group">
-                            <label for="company_name">Nom de la Société</label>
-                            <input type="text" id="company_name" name="company_name" class="form-control"
-                                placeholder="Votre entreprise">
+                <form id="lead-form" class="quiz-form">
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar" style="width: 33%"></div>
+                        <div class="step-indicators">
+                            <span class="step-dot active">1</span>
+                            <span class="step-dot">2</span>
+                            <span class="step-dot">3</span>
                         </div>
                     </div>
 
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="phone_number">Numéro de Téléphone *</label>
-                            <input type="tel" id="phone_number" name="phone_number" class="form-control" required
-                                placeholder="Example: 06 61 ...">
+                    <!-- Step 1: Contact Info -->
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-title">Vos Coordonnées</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="full_name">Nom Complet *</label>
+                                <input type="text" id="full_name" name="full_name" class="form-control" required
+                                    placeholder="Votre nom">
+                            </div>
+                            <div class="form-group">
+                                <label for="company_name">Nom de la Société</label>
+                                <input type="text" id="company_name" name="company_name" class="form-control"
+                                    placeholder="Votre entreprise">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="ville">Ville *</label>
-                            <input type="text" id="ville" name="ville" class="form-control" value="Marrakech" required>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="phone_number">Numéro de Téléphone *</label>
+                                <input type="tel" id="phone_number" name="phone_number" class="form-control" required
+                                    placeholder="Example: 06 61 ...">
+                            </div>
+                            <div class="form-group">
+                                <label for="ville">Ville *</label>
+                                <input type="text" id="ville" name="ville" class="form-control" value="Casablanca"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="nav-buttons right">
+                            <button type="button" class="btn btn-primary btn-next">Suivant &rarr;</button>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="activity_type">Quel est votre type d'activité ? *</label>
-                        <select id="activity_type" name="activity_type" class="form-control" required>
-                            <option value="" disabled selected>Choisir une option...</option>
-                            <option value="restaurant">Restaurant / Café</option>
-                            <option value="hotel">Hôtel</option>
-                            <option value="boucherie">Boucherie / Poissonnerie</option>
-                            <option value="agriculture">Agriculture / Agroalimentaire</option>
-                            <option value="industrie">Industrie</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="cold_room_type">Quel type de chambre froide recherchez-vous ? *</label>
-                        <select id="cold_room_type" name="cold_room_type" class="form-control" required>
-                            <option value="" disabled selected>Choisir une option...</option>
-                            <option value="positive">Chambre Froide Positive (&gt; 0°C)</option>
-                            <option value="negative">Chambre Froide Négative (&lt; 0°C)</option>
-                            <option value="mixte">Mixte / Les deux</option>
-                            <option value="unsure">Je ne suis pas sûr</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="capacity">Surface ou capacité approximative souhaitée ?</label>
-                        <input type="text" id="capacity" name="capacity" class="form-control"
-                            placeholder="Ex: 20m2, 100kg...">
-                    </div>
-
-                    <div class="form-grid">
+                    <!-- Step 2: Needs -->
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-title">Votre Activité</h3>
                         <div class="form-group">
-                            <label for="installation_timing">Quand souhaitez-vous réaliser l'installation ?</label>
-                            <select id="installation_timing" name="installation_timing" class="form-control">
-                                <option value="urgent">Urgent (Immédiat)</option>
-                                <option value="1_month">Dans le mois</option>
-                                <option value="3_months">Dans les 3 mois</option>
-                                <option value="project">Projet futur</option>
+                            <label for="activity_type">Quel est votre type d'activité ? *</label>
+                            <select id="activity_type" name="activity_type" class="form-control" required>
+                                <option value="" disabled selected>Choisir une option...</option>
+                                <option value="restaurant">Restaurant / Café</option>
+                                <option value="hotel">Hôtel</option>
+                                <option value="boucherie">Boucherie / Poissonnerie</option>
+                                <option value="agriculture">Agriculture / Agroalimentaire</option>
+                                <option value="industrie">Industrie</option>
+                                <option value="autre">Autre</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="has_local">Avez-vous déjà un local prêt ?</label>
-                            <select id="has_local" name="has_local" class="form-control">
-                                <option value="yes">Oui</option>
-                                <option value="no">Non</option>
-                                <option value="in_progress">En construction</option>
+                            <label for="cold_room_type">Quel type de chambre froide recherchez-vous ? *</label>
+                            <select id="cold_room_type" name="cold_room_type" class="form-control" required>
+                                <option value="" disabled selected>Choisir une option...</option>
+                                <option value="positive">Chambre Froide Positive (&gt; 0°C)</option>
+                                <option value="negative">Chambre Froide Négative (&lt; 0°C)</option>
+                                <option value="mixte">Mixte / Les deux</option>
+                                <option value="unsure">Je ne suis pas sûr</option>
                             </select>
+                        </div>
+                        <div class="nav-buttons">
+                            <button type="button" class="btn btn-outline-dark btn-prev">&larr; Retour</button>
+                            <button type="button" class="btn btn-primary btn-next">Suivant &rarr;</button>
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Demander mon
-                        Devis</button>
-                    <p style="text-align: center; font-size: 0.8rem; color: #999; margin-top: 1rem;">Vos informations
-                        sont confidentielles.</p>
+                    <!-- Step 3: Project Details -->
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-title">Détails du Projet</h3>
+                        <div class="form-group">
+                            <label for="capacity">Surface ou capacité approximative souhaitée ?</label>
+                            <input type="text" id="capacity" name="capacity" class="form-control"
+                                placeholder="Ex: 20m2, 100kg...">
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="installation_timing">Quand souhaitez-vous réaliser l'installation ?</label>
+                                <select id="installation_timing" name="installation_timing" class="form-control">
+                                    <option value="urgent">Urgent (Immédiat)</option>
+                                    <option value="1_month">Dans le mois</option>
+                                    <option value="3_months">Dans les 3 mois</option>
+                                    <option value="project">Projet futur</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="has_local">Avez-vous déjà un local prêt ?</label>
+                                <select id="has_local" name="has_local" class="form-control">
+                                    <option value="yes">Oui</option>
+                                    <option value="no">Non</option>
+                                    <option value="in_progress">En construction</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="nav-buttons">
+                            <button type="button" class="btn btn-outline-dark btn-prev">&larr; Retour</button>
+                            <button type="submit" class="btn btn-primary">Demander mon Devis</button>
+                        </div>
+                        <p style="text-align: center; font-size: 0.8rem; color: #999; margin-top: 1rem;">Vos
+                            informations sont confidentielles.</p>
+                    </div>
                 </form>
             </div>
         </div>
@@ -271,7 +298,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <!-- Scripts -->
     <script type="module" src="/src/main.js"></script>
 </body>
