@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chambres Froides Marrakech | ST Solutions</title>
+    <meta name="description"
+        content="Expert en installation, maintenance et réparation de chambres froides à Marrakech. Service rapide et professionnel pour restaurants, boucheries et industries.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <!-- CSS is imported via main.js -->
+
+    <!-- Custom Style for Hero Image -->
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(4, 59, 114, 0.7), rgba(4, 59, 114, 0.5)), url('assets/hero.png');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Specific tweaks for form */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header
+        style="background: white; box-shadow: var(--shadow-sm); position: fixed; width: 100%; top: 0; z-index: 1000;">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 1rem;">
+            <div class="logo">
+                <span style="font-weight: 800; font-size: 1.5rem; color: var(--primary-color);">ST SOLUTIONS</span>
+            </div>
+            <nav style="display: none;">
+                <!-- Hidden for pure landing page focus, or we can add simple anchors -->
+            </nav>
+            <div class="cta-header">
+                <a href="tel:+212661946697" class="btn btn-outline"
+                    style="color: var(--primary-color); border-color: var(--primary-color);">
+                    <span style="margin-right: 5px;">📞</span> Appel d'Urgence
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container fade-in">
+            <h1 style="color: white; margin-bottom: 1.5rem;">Expert en Installation de<br> Chambres Froides à Marrakech
+            </h1>
+            <p
+                style="font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Solutions de réfrigération fiables pour professionnels. Installation, maintenance et dépannage 24/7.
+            </p>
+            <a href="#devis" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                Obtenir mon Devis Gratuit
+            </a>
+        </div>
+    </section>
+
+    <!-- Services / Value Prop -->
+    <section id="services" class="section-bg-light">
+        <div class="container">
+            <h2 class="text-center">Pourquoi choisir ST Solutions ?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">❄️</div>
+                    <h3>Expertise Froid</h3>
+                    <p>Spécialistes des chambres froides positives et négatives pour tous secteurs (restauration,
+                        industrie, hôtellerie).</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Intervention Rapide</h3>
+                    <p>Basés à Marrakech, nous intervenons rapidement pour vos urgences et maintenances.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Solutions Clé en Main</h3>
+                    <p>De l'étude de vos besoins à l'installation finale, nous gérons tout votre projet de
+                        réfrigération.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Gen Form -->
+    <section id="devis">
+        <div class="container">
+            <div
+                style="max-width: 800px; margin: 0 auto; background: white; padding: 3rem; border-radius: 15px; box-shadow: var(--shadow-lg);">
+                <h2 class="text-center mb-md">Parlez-nous de votre projet</h2>
+                <p class="text-center mb-lg" style="color: var(--text-light);">Remplissez ce formulaire pour recevoir
+                    une estimation rapide et précise.</p>
+
+                <form id="lead-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="full_name">Nom Complet *</label>
+                            <input type="text" id="full_name" name="full_name" class="form-control" required
+                                placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="company_name">Nom de la Société</label>
+                            <input type="text" id="company_name" name="company_name" class="form-control"
+                                placeholder="Votre entreprise">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="phone_number">Numéro de Téléphone *</label>
+                            <input type="tel" id="phone_number" name="phone_number" class="form-control" required
+                                placeholder="Example: 06 61 ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Ville *</label>
+                            <input type="text" id="ville" name="ville" class="form-control" value="Marrakech" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="activity_type">Quel est votre type d'activité ? *</label>
+                        <select id="activity_type" name="activity_type" class="form-control" required>
+                            <option value="" disabled selected>Choisir une option...</option>
+                            <option value="restaurant">Restaurant / Café</option>
+                            <option value="hotel">Hôtel</option>
+                            <option value="boucherie">Boucherie / Poissonnerie</option>
+                            <option value="agriculture">Agriculture / Agroalimentaire</option>
+                            <option value="industrie">Industrie</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cold_room_type">Quel type de chambre froide recherchez-vous ? *</label>
+                        <select id="cold_room_type" name="cold_room_type" class="form-control" required>
+                            <option value="" disabled selected>Choisir une option...</option>
+                            <option value="positive">Chambre Froide Positive (&gt; 0°C)</option>
+                            <option value="negative">Chambre Froide Négative (&lt; 0°C)</option>
+                            <option value="mixte">Mixte / Les deux</option>
+                            <option value="unsure">Je ne suis pas sûr</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="capacity">Surface ou capacité approximative souhaitée ?</label>
+                        <input type="text" id="capacity" name="capacity" class="form-control"
+                            placeholder="Ex: 20m2, 100kg...">
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="installation_timing">Quand souhaitez-vous réaliser l'installation ?</label>
+                            <select id="installation_timing" name="installation_timing" class="form-control">
+                                <option value="urgent">Urgent (Immédiat)</option>
+                                <option value="1_month">Dans le mois</option>
+                                <option value="3_months">Dans les 3 mois</option>
+                                <option value="project">Projet futur</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="has_local">Avez-vous déjà un local prêt ?</label>
+                            <select id="has_local" name="has_local" class="form-control">
+                                <option value="yes">Oui</option>
+                                <option value="no">Non</option>
+                                <option value="in_progress">En construction</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Demander mon
+                        Devis</button>
+                    <p style="text-align: center; font-size: 0.8rem; color: #999; margin-top: 1rem;">Vos informations
+                        sont confidentielles.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--primary-color); color: white; padding: 3rem 0; margin-top: 4rem;">
+        <div class="container" style="text-align: center;">
+            <h4 style="color: white; margin-bottom: 1rem;">ST SOLUTIONS</h4>
+            <p>Expert en réfrigération commerciale et industrielle à Marrakech.</p>
+            <div style="margin: 2rem 0;">
+                <p>📍 Marrakech, Maroc</p>
+                <p>📞 <a href="tel:+212661946697" style="color: var(--secondary-color);">+212 661 94 66 97</a></p>
+                <p>✉️ contact@stsolutions.ma</p>
+            </div>
+            <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2026 ST Solutions. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
